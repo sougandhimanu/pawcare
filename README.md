@@ -5,7 +5,7 @@ Firebase authentication/database and Google Maps + Places for finding nearby
 providers.
 
 - `Pawcare/` – Android Studio project (Gradle, Java, `com.example.pawcare`)
-- `pawcare_images/` – app screenshots / reference images
+- `pawcare_images/` – all working screenshots of the app are in this folder
 
 ## Setup
 
