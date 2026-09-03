@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pawcare</string>
+    <!-- google_maps_key is generated at build time from the MAPS_API_KEY entry in local.properties -->
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="my_profile">My Profile</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="pet_name">Pet\'s Name</string>
+    <string name="breed">Breed</string>
+    <string name="age">Age</string>
+    <string name="favorite_toy">Favorite Toy</string>
+    <string name="food_preferences">Food Preferences</string>
+    <string name="allergies">Allergies</string>
+    <string name="special_notes">Special Notes</string>
+    <string name="confirm">Confirm</string>
+    <string name="edit">Edit</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="colorPrimary">#6200EE</string> <!-- Replace with actual color value from colors.xml -->
+    <string name="white">#FFFFFF</string> <!-- Replace with actual color value from colors.xml -->
+    <string name="select_image">Select Image</string>
+    <string name="default_web_client_id">1234567890-abcd1234efgh5678ijkl90.apps.googleusercontent.com</string>
+
+</resources>

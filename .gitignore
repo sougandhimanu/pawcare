@@ -1,0 +1,23 @@
+# Secrets / local config
+local.properties
+**/local.properties
+**/google-services.json
+
+# Android / Gradle build output
+*.iml
+.gradle/
+**/.gradle/
+build/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Android Studio / IntelliJ
+.idea/
+**/.idea/
+*.hprof
+
+# OS
+.DS_Store
+Thumbs.db

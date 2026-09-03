@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgHome"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/home"
+        android:contentDescription="@string/home"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/imgLogout"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/logout"
+        android:contentDescription="@string/logout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvProfileHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_profile"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textStyle="bold"
+        android:layout_below="@id/imgHome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvAccountSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_settings"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textStyle="bold"
+        android:layout_below="@id/tvProfileHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAccountSettings"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="4dp"
+        android:layout_marginTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imgProfilePicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_person"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop" />
+
+            <EditText
+                android:id="@+id/editPetName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgProfilePicture"
+                android:layout_marginTop="16dp"
+                android:hint="@string/pet_name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editBreed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editPetName"
+                android:hint="@string/breed"
+                android:inputType="text"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/editAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editBreed"
+                android:hint="@string/age"
+                android:inputType="number"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/editToy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editAge"
+                android:hint="@string/favorite_toy"
+                android:inputType="text"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/editFoodPreferences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editToy"
+                android:hint="@string/food_preferences"
+                android:inputType="text"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/editAllergies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editFoodPreferences"
+                android:hint="@string/allergies"
+                android:inputType="text"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/editSpecialNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editAllergies"
+                android:hint="@string/special_notes"
+                android:inputType="text"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit"
+                android:backgroundTint="#689E38"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/editSpecialNotes"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm"
+                android:backgroundTint="#689E38"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/btnEdit"
+                android:layout_marginTop="8dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Back button -->
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"/>
+
+
+        <!-- Home icon -->
+        <ImageView
+            android:id="@+id/imgHome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/home"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="2dp"/>
+
+
+        <!-- TextView for displaying the selected daycare service -->
+        <!-- Ensure this TextView is placed below the imgHome or imgBack whichever is lower -->
+        <TextView
+            android:id="@+id/tvDaycareService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daycare Service"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            android:layout_below="@+id/imgHome"
+            android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"/>
+
+        <!-- TextView for displaying the price -->
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price will be calculated here"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_below="@id/tvDaycareService"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Container for duration buttons -->
+        <LinearLayout
+            android:id="@+id/hoursLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/priceTextView"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/fourHoursButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4 Hours"/>
+
+            <Button
+                android:id="@+id/eightHoursButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="8 Hours"/>
+
+            <Button
+                android:id="@+id/twelveHoursButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12 Hours"/>
+
+            <Button
+                android:id="@+id/twentyFourHoursButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="24 Hours"/>
+        </LinearLayout>
+
+        <!-- CalendarView for picking a date -->
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/hoursLinearLayout"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Autocomplete fragment for location selection -->
+        <fragment
+            android:id="@+id/autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calendarView"
+            android:background="@drawable/border"
+            android:padding="8dp"/>
+
+        <!-- Map fragment to display selected location -->
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/autocomplete_fragment"
+            android:layout_marginTop="8dp"/>
+
+        <!-- TextView for displaying the selected location -->
+        <TextView
+            android:id="@+id/selectedLocationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/map"
+            android:text="No location selected"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Button to confirm booking -->
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/selectedLocationText"
+            android:text="Confirm Booking"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirmButton"
+            android:text="Cancel"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+</ScrollView>
+
